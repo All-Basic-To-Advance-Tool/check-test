@@ -3720,6 +3720,117 @@
       padding-top: 8px;
     }
 
+    /* ══ REFERRAL & EARNING ══ */
+    .ref-promo-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(59,130,246,0.14));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 20px;
+      margin-bottom: 36px;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .ref-promo-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px #00000055; }
+    .ref-promo-icon { font-size: 2rem; flex-shrink: 0; }
+    .ref-promo-text { flex: 1; }
+    .ref-promo-text h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.15rem; color: var(--gold); margin-bottom: 3px; }
+    .ref-promo-text p { color: var(--muted); font-size: 0.85rem; }
+    .ref-promo-arrow { font-size: 1.3rem; color: var(--accent); flex-shrink: 0; }
+
+    .ref-btn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 10px auto 30px; max-width: 720px; }
+    @media(max-width:700px) { .ref-btn-grid { grid-template-columns: 1fr; } }
+    .ref-big-btn {
+      background: rgba(26,29,39,0.6); border: 1px solid var(--border); border-radius: 16px;
+      padding: 24px 16px; text-align: center; cursor: pointer; color: var(--text);
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1rem;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .ref-big-btn:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .ref-big-btn .ref-big-icon { font-size: 1.8rem; display: block; margin-bottom: 8px; }
+    .ref-big-btn.disabled { opacity: 0.55; cursor: default; }
+    .ref-big-btn.disabled:hover { transform: none; border-color: var(--border); }
+
+    .ref-back-link {
+      display: inline-flex; align-items: center; gap: 6px; color: var(--accent2);
+      font-weight: 700; font-size: 0.88rem; cursor: pointer; margin-bottom: 18px;
+    }
+
+    .ref-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-bottom: 30px; }
+    @media(max-width:820px) { .ref-cards { grid-template-columns: 1fr; } }
+    .ref-card {
+      background: rgba(26,29,39,0.6); border: 1px solid var(--border); border-radius: 18px;
+      padding: 22px 20px;
+    }
+    .ref-card.premium { border: 2px solid var(--gold); }
+    .ref-card h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; color: var(--gold); margin-bottom: 8px; }
+    .ref-card p.ref-desc { color: var(--muted); font-size: 0.88rem; margin-bottom: 12px; line-height: 1.5; }
+    .ref-card ol { padding-left: 20px; margin-bottom: 14px; }
+    .ref-card ol li { color: var(--text); font-size: 0.85rem; line-height: 1.6; margin-bottom: 4px; }
+    .ref-extra-line {
+      background: rgba(245,158,11,0.12); border: 1px solid var(--accent);
+      border-radius: 10px; padding: 10px 12px; font-size: 0.83rem; color: var(--gold);
+      margin-bottom: 14px; line-height: 1.5;
+    }
+
+    .ref-table-wrap { overflow-x: auto; margin-bottom: 6px; }
+    table.ref-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+    table.ref-table th, table.ref-table td {
+      border: 1px solid var(--border); padding: 8px 10px; text-align: center; white-space: nowrap;
+    }
+    table.ref-table th { background: rgba(245,158,11,0.15); color: var(--gold); font-family:'Rajdhani',sans-serif; }
+    table.ref-table td { color: var(--text); }
+
+    .ref-rules-note {
+      background: rgba(59,130,246,0.1); border: 1px solid var(--accent2);
+      border-radius: 12px; padding: 14px 16px; font-size: 0.85rem; color: var(--text);
+      line-height: 1.6; margin: 18px 0 26px;
+    }
+    .ref-rules-note b { color: var(--accent2); }
+
+    .ref-join-btn {
+      display: block; margin: 0 auto; background: linear-gradient(135deg, var(--accent), #d97706);
+      color: #1a1105; font-weight: 700; font-family:'Rajdhani',sans-serif; font-size: 1rem;
+      border: none; border-radius: 30px; padding: 14px 40px; cursor: pointer;
+    }
+
+    .ref-join-choice-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; max-width: 560px; margin: 20px auto 0; }
+    @media(max-width:600px) { .ref-join-choice-grid { grid-template-columns: 1fr; } }
+    .ref-join-choice-btn {
+      background: rgba(26,29,39,0.6); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px; text-align: center; cursor: pointer; font-family:'Rajdhani',sans-serif;
+      font-weight: 700; font-size: 1rem; color: var(--text);
+    }
+    .ref-join-choice-btn:hover { border-color: var(--accent); }
+    .ref-join-choice-btn.premium { border-color: var(--gold); }
+
+    .ref-code-box {
+      background: rgba(34,197,94,0.1); border: 1px solid var(--correct); border-radius: 14px;
+      padding: 18px; text-align: center; margin: 20px 0;
+    }
+    .ref-code-box .ref-code-val { font-size: 1.4rem; font-weight: 700; letter-spacing: 2px; color: var(--correct); font-family:'Rajdhani',sans-serif; }
+    .ref-code-box .ref-link-val { word-break: break-all; color: var(--accent2); font-size: 0.82rem; margin-top: 6px; }
+    .ref-code-actions { display: flex; gap: 10px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+    .ref-code-actions button {
+      background: var(--card2); border: 1px solid var(--border); color: var(--text);
+      border-radius: 8px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; font-weight: 700;
+    }
+    .ref-change-form { display: flex; gap: 8px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+    .ref-change-form input {
+      background: var(--card2); border: 1px solid var(--border); color: var(--text);
+      border-radius: 8px; padding: 9px 12px; font-size: 0.85rem; width: 200px; max-width: 60vw;
+      text-transform: uppercase;
+    }
+    .ref-change-form button {
+      background: var(--accent2); border: none; color: #fff; font-weight: 700;
+      border-radius: 8px; padding: 9px 16px; cursor: pointer; font-size: 0.85rem;
+    }
+    .ref-msg { text-align: center; font-size: 0.82rem; margin-top: 10px; }
+    .ref-msg.err { color: var(--wrong); }
+    .ref-msg.ok { color: var(--correct); }
+
     /* ══ WHATSAPP FAB (Pricing page) ══ */
     .pp-wa-fab {
       display: none;
@@ -6760,7 +6871,9 @@
       star: icon('<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon>'),
       telegram: icon('<path d="M22 2 11 13"></path><path d="M22 2 15 22 11 13 2 9 22 2z"></path>'),
       whatsapp: icon('<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>'),
-      truck: icon('<rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>')
+      truck: icon('<rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>'),
+      gift: icon('<polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>'),
+      wallet: icon('<path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4z"></path>')
     };
 
     function pageSection(iconKey, heading, bodyHTML) {
@@ -6995,6 +7108,14 @@
               <div style="font-family:'Rajdhani',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.5px;">Plans load ho rahe hain...</div>
             </div>
           </div>
+          <div class="ref-promo-card" onclick="openReferralHome()">
+            <div class="ref-promo-icon">🎁</div>
+            <div class="ref-promo-text">
+              <h3>Referral &amp; Earning</h3>
+              <p>Apna referral link share karo — jab bhi koi us se plan buy karega, aapko income milegi.</p>
+            </div>
+            <div class="ref-promo-arrow">→</div>
+          </div>
           <div class="pp-secure">
             <div class="pp-secure-row">🔒 Secure Payment &nbsp;—&nbsp; Powered by Razorpay</div>
             <div class="pp-secure-methods">UPI &nbsp;•&nbsp; Cards &nbsp;•&nbsp; Net Banking &nbsp;•&nbsp; Wallets</div>
@@ -7166,6 +7287,221 @@
       }
       tick();
       ppCountdownInterval = setInterval(tick, 1000);
+    }
+
+    // ══════════════════════════════════════════════════════════
+    //  REFERRAL & EARNING
+    // ══════════════════════════════════════════════════════════
+    let cachedReferralConfig = null; // live rows from "settings" sheet (E/F %)
+    let cachedReferralStatus = null; // this user's join/code status
+
+    function referralStudentParams() {
+      return { name: student?.name || "", mobile: student?.mobile || "", gender: student?.gender || "", email: student?.email || "" };
+    }
+
+    async function fetchReferralConfig(force) {
+      if (cachedReferralConfig && !force) return cachedReferralConfig;
+      const r = await api({ action: "getReferralConfig" });
+      cachedReferralConfig = (r.ok && Array.isArray(r.rows)) ? r.rows : [];
+      return cachedReferralConfig;
+    }
+
+    async function fetchReferralStatus(force) {
+      if (!student) return { joined: false };
+      if (cachedReferralStatus && !force) return cachedReferralStatus;
+      const r = await api({ action: "getReferralStatus", ...referralStudentParams() });
+      cachedReferralStatus = r.ok ? r : { joined: false };
+      return cachedReferralStatus;
+    }
+
+    function referralIncomeTableHTML(rows, planKey) {
+      // planKey: "basicPercent"/"basicIncome" ya "premiumPercent"/"premiumIncome"
+      const pctKey = planKey === "premium" ? "premiumPercent" : "basicPercent";
+      const incKey = planKey === "premium" ? "premiumIncome" : "basicIncome";
+      let body = "";
+      rows.forEach(r => {
+        const label = /year/i.test(String(r.label)) ? r.label : (r.months + " Month");
+        body += `<tr><td>${r.months}</td><td>${label} Plan</td><td>${(r[pctKey] * 100).toFixed(2)}%</td><td>₹${r[incKey].toFixed(2)}</td></tr>`;
+      });
+      return `<div class="ref-table-wrap"><table class="ref-table">
+        <thead><tr><th>Month</th><th>Plan</th><th>Income (%)</th><th>Income (₹)</th></tr></thead>
+        <tbody>${body || '<tr><td colspan="4">Data load nahi ho payi</td></tr>'}</tbody>
+      </table></div>`;
+    }
+
+    // ── Referral Home: 3 buttons ──
+    async function openReferralHome() {
+      const wrap = document.getElementById("pageContentWrap");
+      wrap.innerHTML = `
+        <div class="page-hero">
+          <div class="page-icon-circle">${LEGAL_ICONS.gift}</div>
+          <h2>Referral &amp; Earning</h2>
+          <p>Refer karo, kamao — apna income track karo</p>
+        </div>
+        <div class="ref-btn-grid">
+          <div class="ref-big-btn" onclick="openReferralRules()">
+            <span class="ref-big-icon">📜</span>Referral Rules
+          </div>
+          <div class="ref-big-btn disabled" title="Coming soon">
+            <span class="ref-big-icon">💰</span>My Earnings<br><small style="font-weight:400;color:var(--muted);">Coming soon</small>
+          </div>
+          <div class="ref-big-btn disabled" title="Coming soon">
+            <span class="ref-big-icon">🏦</span>Withdraw<br><small style="font-weight:400;color:var(--muted);">Coming soon</small>
+          </div>
+        </div>`;
+      showScreen("screenPageContent");
+    }
+
+    // ── Referral Rules: 2 cards (Basic / Premium) with live table ──
+    async function openReferralRules() {
+      const wrap = document.getElementById("pageContentWrap");
+      wrap.innerHTML = `
+        <div class="ref-back-link" onclick="openReferralHome()">← Back</div>
+        <div class="page-hero">
+          <div class="page-icon-circle">${LEGAL_ICONS.gift}</div>
+          <h2>Referral Rules</h2>
+          <p>Join karne se pehle rules zaroor padhein</p>
+        </div>
+        <div id="refRulesCards" class="ref-cards">
+          <div style="grid-column:1/-1;text-align:center;padding:30px;color:var(--muted);">Loading...</div>
+        </div>
+        <div class="ref-rules-note">
+          <b>Rule:</b> Paisa tabhi milega jab aapne <b>withdrawal request</b> submit ki ho — request submit karne ke <b>10 din</b> ke andar aapka paisa aapko bhej diya jaayega.<br><br>
+          Rules future me update ho sakti hain, time-to-time yahan check karte rahein.
+        </div>
+        <button class="ref-join-btn" onclick="openReferralJoin()">Join Referral →</button>`;
+      showScreen("screenPageContent");
+
+      const rows = await fetchReferralConfig();
+      const cardsWrap = document.getElementById("refRulesCards");
+      if (!cardsWrap) return;
+      if (!rows.length) {
+        cardsWrap.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:30px;color:var(--muted);">⚠ Data abhi available nahi hai</div>`;
+        return;
+      }
+      const basicRules = rows.map((r, i) =>
+        `<li>${(/year/i.test(String(r.label)) ? r.label : r.months + " Month")} plan par <b>${(r.basicPercent * 100).toFixed(2)}%</b> referral income milegi.</li>`
+      ).join("");
+      const premiumRules = rows.map((r, i) =>
+        `<li>${(/year/i.test(String(r.label)) ? r.label : r.months + " Month")} plan par <b>${(r.premiumPercent * 100).toFixed(2)}%</b> referral income milegi.</li>`
+      ).join("");
+
+      cardsWrap.innerHTML = `
+        <div class="ref-card">
+          <h3>🎯 Referral Basic</h3>
+          <p class="ref-desc">Yadi aap referral ka Basic plan join karte hain to ye rules apply honge:</p>
+          <ol>
+            <li>Referral income tabhi aayega jab user koi plan <b>buy</b> karega — sirf registration ya share karne se koi paisa nahi milega.</li>
+            ${basicRules}
+          </ol>
+          ${referralIncomeTableHTML(rows, "basic")}
+        </div>
+        <div class="ref-card premium">
+          <h3>💎 Referral Premium</h3>
+          <p class="ref-desc">Yadi aap referral ka Premium plan join karte hain to ye rules apply honge:</p>
+          <ol>
+            <li>Referral income tabhi aayega jab user koi plan <b>buy</b> karega — sirf registration ya share karne se koi paisa nahi milega.</li>
+            ${premiumRules}
+          </ol>
+          ${referralIncomeTableHTML(rows, "premium")}
+          <div class="ref-extra-line">✨ Iss plan me ek baar member add karne par, jab-jab wo plan buy karega, tab-tab uska paisa aapko milega — <b>life time ke liye</b>.</div>
+        </div>`;
+    }
+
+    // ── Join Referral: table + 2 choice buttons (or existing code/change-code UI) ──
+    async function openReferralJoin() {
+      if (!student) { alert("Pehle register/login karein"); return; }
+      const wrap = document.getElementById("pageContentWrap");
+      wrap.innerHTML = `
+        <div class="ref-back-link" onclick="openReferralRules()">← Back</div>
+        <div class="page-hero">
+          <div class="page-icon-circle">${LEGAL_ICONS.gift}</div>
+          <h2>Join Referral Program</h2>
+          <p>Apna plan chunein aur turant apna referral code paayein</p>
+        </div>
+        <div id="refJoinTableWrap" style="text-align:center;color:var(--muted);padding:20px;">Loading...</div>
+        <div id="refJoinBody"></div>`;
+      showScreen("screenPageContent");
+
+      const [rows, status] = await Promise.all([fetchReferralConfig(), fetchReferralStatus(true)]);
+      const tableWrap = document.getElementById("refJoinTableWrap");
+      const body = document.getElementById("refJoinBody");
+      if (!rows.length) { tableWrap.innerHTML = `⚠ Data abhi available nahi hai`; return; }
+
+      if (status.joined) {
+        tableWrap.innerHTML = referralIncomeTableHTML(rows, status.plan === "premium" ? "premium" : "basic");
+        renderReferralCodeBox(body, status);
+        return;
+      }
+
+      tableWrap.innerHTML = referralIncomeTableHTML(rows, "basic");
+      body.innerHTML = `
+        <div class="ref-join-choice-grid">
+          <div class="ref-join-choice-btn" onclick="doJoinReferral('basic')">🎯 Join Basic Plan</div>
+          <div class="ref-join-choice-btn premium" onclick="doJoinReferral('premium')">💎 Join Premium Plan</div>
+        </div>
+        <div id="refJoinMsg" class="ref-msg"></div>`;
+    }
+
+    async function doJoinReferral(plan) {
+      const msgEl = document.getElementById("refJoinMsg");
+      if (msgEl) msgEl.textContent = "Joining...";
+      const r = await api({ action: "joinReferral", plan, ...referralStudentParams() });
+      if (!r.ok) { if (msgEl) { msgEl.textContent = r.error || "Kuch galat ho gaya"; msgEl.className = "ref-msg err"; } return; }
+      cachedReferralStatus = { ok: true, joined: true, code: r.code, plan: r.plan, changesThisMonth: 0, changesLeft: 3, canChangeToday: true };
+      openReferralJoin();
+    }
+
+    function referralFullLink(code) {
+      return window.location.origin + window.location.pathname + "?ref=" + encodeURIComponent(code);
+    }
+
+    function renderReferralCodeBox(container, status) {
+      const link = referralFullLink(status.code);
+      container.innerHTML = `
+        <div class="ref-code-box">
+          <div style="color:var(--muted);font-size:0.8rem;margin-bottom:6px;">Aapka Referral Code (${status.plan === "premium" ? "Premium" : "Basic"} Plan)</div>
+          <div class="ref-code-val">${status.code}</div>
+          <div class="ref-link-val">${link}</div>
+          <div class="ref-code-actions">
+            <button onclick="copyReferralLink('${link.replace(/'/g, "\\'")}')">📋 Copy Link</button>
+            <button onclick="toggleChangeCodeForm()">✏️ Change Code</button>
+          </div>
+          <div id="refChangeCodeForm" style="display:none;">
+            <div class="ref-change-form">
+              <input id="refNewCodeInput" maxlength="15" placeholder="NAYA CODE">
+              <button onclick="submitChangeReferralCode()">Update</button>
+            </div>
+            <div style="color:var(--muted);font-size:0.75rem;margin-top:8px;">Aap mahine me 3 baar aur din me 1 baar code change kar sakte hain. (${status.changesLeft ?? 3} baaki is mahine)</div>
+          </div>
+          <div id="refCodeMsg" class="ref-msg"></div>
+        </div>`;
+    }
+
+    function toggleChangeCodeForm() {
+      const f = document.getElementById("refChangeCodeForm");
+      if (f) f.style.display = f.style.display === "none" ? "block" : "none";
+    }
+
+    function copyReferralLink(link) {
+      navigator.clipboard?.writeText(link).then(() => {
+        const msg = document.getElementById("refCodeMsg");
+        if (msg) { msg.textContent = "Link copy ho gaya ✅"; msg.className = "ref-msg ok"; }
+      }).catch(() => {});
+    }
+
+    async function submitChangeReferralCode() {
+      const input = document.getElementById("refNewCodeInput");
+      const msg = document.getElementById("refCodeMsg");
+      const newCode = (input?.value || "").trim();
+      if (!newCode) return;
+      msg.textContent = "Updating..."; msg.className = "ref-msg";
+      const r = await api({ action: "changeReferralCode", newCode, ...referralStudentParams() });
+      if (!r.ok) { msg.textContent = r.error || "It's not valid code"; msg.className = "ref-msg err"; return; }
+      msg.textContent = "Code update ho gaya ✅"; msg.className = "ref-msg ok";
+      cachedReferralStatus = null;
+      const status = await fetchReferralStatus(true);
+      renderReferralCodeBox(document.getElementById("refJoinBody"), status);
     }
 
     // ✅ Razorpay checkout khulta hai — payment success hone ke baad backend
